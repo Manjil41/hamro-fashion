@@ -60,7 +60,7 @@ const Header = () => {
                         <i className="fa-regular fa-heart"></i>
                     </Link>
 
-                    <Link to="#" className="text-gray-800 hover:bg-gray-50 transition-transform duration-300 ease-in-out hover:scale-110 rounded-lg p-2">
+                    <Link to="/mycart" className="text-gray-800 hover:bg-gray-50 transition-transform duration-300 ease-in-out hover:scale-110 rounded-lg p-2">
                         <i className="fa-solid fa-cart-shopping"></i>
                     </Link>
 

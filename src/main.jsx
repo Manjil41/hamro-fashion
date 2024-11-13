@@ -9,6 +9,8 @@ import Women from './Components/Women Section/Women.jsx'
 import Combos from './Components/Combos/Combos.jsx'
 import Signin from './Components/SIgnin-Signup/Signin.jsx'
 import Signup from './Components/SIgnin-Signup/Signup.jsx'
+import ProductPage from './Components/Product-Page/ProductPage.jsx'
+import MyCart from './Components/Cart/MyCart.jsx'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
       {
         path: "combos",
         element: <Combos/>
+      },
+      {
+        path: "product",
+        element: <ProductPage/>
+      },
+      {
+        path: "mycart",
+        element: <MyCart/>
       }
     ]
   },
@@ -40,7 +50,8 @@ const router = createBrowserRouter([
   {
     path: '/signup',
     element: <Signup/>
-  }
+  },
+  
 ])
 
 createRoot(document.getElementById('root')).render(

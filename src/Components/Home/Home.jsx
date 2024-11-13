@@ -10,17 +10,19 @@ const Home = () => {
   return (
     <>
       {/* Hero-section  */}
-      <div className="mx-2 sm:mx-4 md:mx-6 bg-hero-pattern relative -z-10 bg-no-repeat bg-cover mb-4">
-        <div className='bg-star bg-no-repeat bg-cover z-10'>
-          <div className="flex flex-col lg:flex-row items-center">
-            <div className="w-full lg:w-1/2 p-4 sm:p-8 md:p-12 lg:p-16 text-white animate-fade-in-left">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 animate-slide-up">
+      <div className="mx-2 sm:mx-4 md:mx-6 lg:mx-auto max-w-7xl">
+        <div className="bg-purple-600 rounded-3xl overflow-hidden relative mx-8">
+          <div className="flex flex-col lg:flex-row items-center p-6 md:p-8 lg:p-12">
+            {/* Left Content Section */}
+            <div className="w-full lg:w-1/2 text-white z-10 animate-fade-in-left">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 lg:mb-6 animate-slide-up">
                 Discover the Latest Collection of Fashion
               </h1>
-              <p className="text-base sm:text-lg mb-4 animate-fade-in transition-opacity delay-300">
+              <p className="text-base sm:text-lg mb-6 opacity-90 animate-fade-in transition-opacity delay-300">
                 Stay ahead of the fashion game with our new arrivals. Explore the latest styles and find your perfect look.
               </p>
-              <button className="bg-black text-base text-white rounded-full p-3 w-36 hover:bg-slate-800 mb-8 lg:mb-14 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+              <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 
+                transition-all duration-300 hover:scale-105 animate-bounce-subtle">
                 SHOP NOW
               </button>
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-0 mt-4 animate-fade-in transition-opacity delay-500">
@@ -36,16 +38,100 @@ const Home = () => {
               </div>
             </div>
             
-            <div className="w-full lg:w-1/2 flex justify-center bg-model-bg bg-no-repeat mt-6 lg:mt-11 -z-[1] animate-fade-in-right">
-              <img 
-                src="./Home-section/boy-girl.png" 
-                alt="Fashion Models" 
-                className="w-full max-w-md lg:max-w-full rounded-lg object-cover transition-transform hover:scale-105 duration-500"
-              />
+           {/* Right Image Section */}
+           <div className="w-full lg:w-1/2 mt-8 lg:mt-0 relative animate-fade-in-right">
+              <div className="relative w-full h-[400px] lg:h-[600px] bg-pink-300 rounded-full overflow-hidden">
+                <img
+                  src="./Home-section/boy-girl.png"
+                  alt="Fashion Models"
+                  className="w-full h-full object-cover object-center transition-transform hover:scale-105 duration-500"
+                />
+              </div>
             </div>
+            
+            {/* Decorative Stars */}
+            {[...Array(12)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute text-yellow-300 animate-float"
+                style={{
+                  top: `${Math.random() * 100}%`,
+                  left: `${Math.random() * 100}%`,
+                  animation: `float ${3 + i * 0.5}s ease-in-out infinite ${i * 0.2}s`,
+                  fontSize: `${Math.random() * 10 + 20}px`,
+                }}
+              >
+                ★
+              </div>
+            ))}
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-20px); }
+        }
+
+        @keyframes bounce-subtle {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-5px); }
+        }
+
+        .animate-bounce-subtle {
+          animation: bounce-subtle 2s ease-in-out infinite;
+        }
+
+        .animate-fade-in-left {
+          animation: fadeInLeft 1s ease-out forwards;
+        }
+
+        .animate-fade-in-right {
+          animation: fadeInRight 1s ease-out forwards;
+        }
+
+        .animate-slide-up {
+          animation: slideUp 0.8s ease-out forwards;
+        }
+
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes fadeInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes fadeInRight {
+          from {
+            opacity: 0;
+            transform: translateX(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slideUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
 
       {/* policy section  */}
       <div className='bg-white rounded-2xl p-4 mx-2 sm:mx-8 md:mx-16 lg:mx-24 mb-8 mt-8 lg:mt-14 hover:shadow-xl transition-shadow duration-300 animate-slide-up'>

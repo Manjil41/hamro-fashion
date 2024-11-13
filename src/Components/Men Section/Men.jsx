@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp, Star, Filter, X, Heart, RefreshCw } from 'lucide-react';
 
@@ -274,11 +275,13 @@ const Men = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
+             <Link to={`/product`} className="group relative"> 
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {products.map((product, index) => (
                 <ProductCard key={index} {...product} />
               ))}
             </div>
+              </Link>
           </motion.div>
         </div>
       </div>

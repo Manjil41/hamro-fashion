@@ -41,7 +41,7 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-4">
+    <div className="max-w-7xl mx-6 p-4">
       <div className="flex flex-col md:flex-row gap-8">
         {/* Product Images */}
         <div className="md:w-1/2">

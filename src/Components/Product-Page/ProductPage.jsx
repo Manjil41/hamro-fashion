@@ -175,7 +175,7 @@ const ProductPage = () => {
             className={`py-2 px-4 ${activeTab === 'reviews' ? 'border-b-2 border-black' : 'text-gray-500'}`}
             onClick={() => setActiveTab('reviews')}
           >
-            Reviews
+           Reviews 
           </button>
         </div>
         <div className="mt-4">

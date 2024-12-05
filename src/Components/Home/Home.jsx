@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Flashsale from '../Flash sale section/Flashsale'
 import Feature from '../Feature-models/Feature'
 import MensFashion from '../Men Section/MensFashion'
@@ -23,7 +24,7 @@ const Home = () => {
               </p>
               <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 
                 transition-all duration-300 hover:scale-105 animate-bounce-subtle">
-                SHOP NOW
+                <Link to="/combos">SHOP NOW</Link>
               </button>
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-0 mt-4 animate-fade-in transition-opacity delay-500">
                 <div className="flex -space-x-2 hover:space-x-1 transition-all duration-300">

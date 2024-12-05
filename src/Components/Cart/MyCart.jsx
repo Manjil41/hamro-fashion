@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Trash2, ArrowLeft, ChevronRight } from 'lucide-react';
 
 const MyCart = () => {
@@ -172,7 +173,8 @@ const MyCart = () => {
 
           <button className="mt-6 flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition-colors">
             <ArrowLeft className="w-4 h-4" />
-            Return to shop
+            <Link to="/">Return to shop</Link>
+            
           </button>
         </div>
 
@@ -214,7 +216,7 @@ const MyCart = () => {
             </div>
 
             <button className="w-full py-3 bg-gray-800 text-white rounded flex items-center justify-center gap-2 hover:bg-gray-700 transition-colors">
-              Checkout
+              <Link to="/checkout">Checkout</Link>
               <ChevronRight className="w-4 h-4" />
             </button>
             

@@ -11,6 +11,11 @@ import Signin from './Components/SIgnin-Signup/Signin.jsx'
 import Signup from './Components/SIgnin-Signup/Signup.jsx'
 import ProductPage from './Components/Product-Page/ProductPage.jsx'
 import MyCart from './Components/Cart/MyCart.jsx'
+import CheckoutComponent from './Components/Checkout page/CheckOut.jsx'
+import CustomerDeliveryDetails from './Components/Details Page/DetailsPage.jsx'
+import AccountDetails from './Components/Account Details/AccountDetails.jsx'
+import PageNotFound from './Components/Page not found/PageNotFound.jsx'
+import Dashboard from './Components/ADMIN/DashBoard.jsx'
 
 const router = createBrowserRouter([
   {
@@ -40,7 +45,23 @@ const router = createBrowserRouter([
       {
         path: "mycart",
         element: <MyCart/>
-      }
+      },
+      {
+        path: "customerdetails",
+        element: <CustomerDeliveryDetails/>
+      },
+      {
+        path: "checkout",
+        element: <CheckoutComponent/>
+      },
+      {
+        path: "accountdetails",
+        element: <AccountDetails/>
+      },
+      {
+        path: "pagenotfound",
+        element: <PageNotFound/>
+      },
     ]
   },
   {
@@ -51,6 +72,10 @@ const router = createBrowserRouter([
     path: '/signup',
     element: <Signup/>
   },
+  {
+    path: 'dashboard',
+    element: <Dashboard/>
+  }
   
 ])
 

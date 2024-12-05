@@ -56,7 +56,7 @@ const Header = () => {
                     <i className="fa-solid fa-magnifying-glass absolute left-3 text-gray-500"></i>
                     <input type="text" placeholder='Search...' className='py-2 pl-10 rounded-xl border-2 border-gray-700 focus:bg-slate-100 focus:outline-gray-200 transition-all duration-300 ease-in-out' />
 
-                    <Link to="#" className="text-gray-800 hover:bg-gray-50 transition-transform duration-300 ease-in-out hover:scale-110 rounded-lg p-2">
+                    <Link to="/wishlist" className="text-gray-800 hover:bg-gray-50 transition-transform duration-300 ease-in-out hover:scale-110 rounded-lg p-2">
                         <i className="fa-regular fa-heart"></i>
                     </Link>
 

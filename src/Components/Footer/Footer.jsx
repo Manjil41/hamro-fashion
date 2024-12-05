@@ -72,6 +72,9 @@ const Footer = () => {
                 <li className='mb-3'>
                   <Link to="/signin" className="hover:underline">Login/Register</Link>
                 </li>
+                <li className='mb-3'>
+                  <Link to="/dashboard" className="hover:underline">Admin</Link>
+                </li>
               </ul>
             </div>
             <div>
@@ -95,7 +98,7 @@ const Footer = () => {
               <h2 className="mb-6 text-lg font-medium text-gray-900 uppercase">Support</h2>
               <ul className="text-gray-600 font-medium">
                 <li className="mb-3">
-                  <Link to="#" className="hover:underline">My Account</Link>
+                  <Link to="/accountdetails" className="hover:underline">My Account</Link>
                 </li>
                 <li className="mb-3">
                   <Link to="#" className="hover:underline">My Order</Link>
@@ -130,7 +133,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li className='mb-3'>
-                  <Link to="/" className="flex items-center hover:underline">
+                  <Link to="/pagenotfound" className="flex items-center hover:underline">
                     <img className='mr-2' src="./twitter.svg" alt="x logo" />
                     Twitter
                   </Link>

@@ -161,7 +161,8 @@ const Signin = () => {
                 type="submit" 
                 className="w-full bg-indigo-600 text-white py-3 rounded-md hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
               >
-                Sign In
+               <Link>Sign In</Link> 
+               
               </button>
             </form>
 
